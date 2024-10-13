@@ -152,7 +152,7 @@ public class Stockcoderank {
         // 输入路径和输出路径
         FileInputFormat.addInputPath(job1, new Path(args[0]));  // 作业1的输入路径
         FileOutputFormat.setOutputPath(job1, new Path(args[1] + "/codecnttmp"));  // 作业1的输出路径
-        
+
         // 执行作业1，等待作业1完成
         if (!job1.waitForCompletion(true)) {
             System.exit(1);
@@ -169,7 +169,8 @@ public class Stockcoderank {
         job2.setOutputKeyClass(Text.class);   // 键: 排名、股票代码、出现次数
         job2.setOutputValueClass(NullWritable.class); // 值: NullWritable
         job2.setSortComparatorClass(DescendingCountComparator.class);
- 
+        job2.setNumReduceTasks(1);
+        
         // 作业2的输入路径是作业1的输出路径
         FileInputFormat.addInputPath(job2, new Path(args[1] + "/codecnttmp/part-*"));  // 作业1的输出作为作业2的输入路径
         FileOutputFormat.setOutputPath(job2, new Path(args[1] + "/coderank"));  // 作业2的输出路径
