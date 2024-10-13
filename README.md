@@ -1,4 +1,4 @@
-#assignment5-1
+#assignment5-1	
 ##设计思路   
 	第1个mapper是用于得到<股票代码,1>这样的键值对  
 	第1个reducer是用于得到<股票代码,出现次数>这样的键值对  
