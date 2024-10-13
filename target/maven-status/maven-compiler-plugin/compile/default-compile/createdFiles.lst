@@ -1,8 +1,0 @@
-Stockcoderank$DescendingCountComparator.class
-Stockcoderank$SkipFirstLineInputFormat.class
-Stockcoderank$RankMapper.class
-Stockcoderank$RankReducer.class
-Stockcoderank$StockCodeReducer.class
-Stockcoderank$StockCodeMapper.class
-Stockcoderank$SkipFirstLineInputFormat$SkipFirstLineRecordReader.class
-Stockcoderank.class
