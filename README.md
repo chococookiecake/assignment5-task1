@@ -55,4 +55,5 @@
 
  
 ##性能、扩展性等⽅⾯存在的不⾜和可能的改进之处	
+
 由于我没有使用诸如TotalOrderPartitioner这样的partitioner，所以我没法做到多个reducer的全局排序，所以我限制reducer数量为1，这肯定是非常非常不利于scale up的，是一个很大的不足
